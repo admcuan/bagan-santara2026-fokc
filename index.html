@@ -755,56 +755,38 @@
 
         /* PRINT OPTIMIZATION */
         @media print {
-            /* Sembunyikan Tombol Kontrol, Konsep Aturan, dan Daftar Peserta saat dicetak/disimpan PDF */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            /* Sembunyikan elemen di luar Header, Pemenang Match & Winners, dan Footer */
             .no-print-controls, 
             .rules-container, 
-            .groups-container { 
+            .groups-container,
+            .bracket-heading,
+            .pools-grid,
+            .pools-connector { 
                 display: none !important; 
             }
 
             body { 
-                background: #ffffff !important; 
-                color: #000000 !important; 
+                background: radial-gradient(circle at top center, #520914 0%, #1f0206 80%) !important; 
+                color: var(--text-light) !important; 
                 padding: 0;
             }
+
             .wrapper { 
-                border: 2px solid #000; 
-                background: #ffffff !important; 
-                color: #000000 !important; 
+                border: 2px solid var(--gold-primary) !important; 
+                background-color: var(--bg-maroon-deep) !important; 
                 box-shadow: none !important;
                 max-width: 100%;
-                padding: 15px;
+                padding: 25px;
             }
-            .main-title, .sub-title, .santara-badge, .winner-header, .lomba-tag, .section-heading { 
-                color: #000000 !important; 
-                -webkit-text-fill-color: #000000 !important;
-                text-shadow: none !important; 
-                border-color: #000 !important; 
+
+            .footer {
+                margin-top: 25px;
             }
-            .pool-card, .winner-grand-card, .semi-box, .footer-group { 
-                background: #ffffff !important; 
-                border: 1px solid #000000 !important; 
-                color: #000000 !important; 
-                box-shadow: none !important;
-            }
-            .pool-header, .podium-badge, .lomba-tag { 
-                background: #eee !important; 
-                color: #000000 !important; 
-                border: 1px solid #000 !important;
-            }
-            .team-item { 
-                background: #ffffff !important; 
-                border: 1px solid #aaa !important; 
-            }
-            .team-label, .team-input, .semi-input, .podium-input, .footer-info { 
-                color: #000000 !important; 
-            }
-            .arrow-down-icon { fill: #000000 !important; }
-            .sponsors-wrapper { border: 1px solid #000; background: #fff !important; }
-            .sponsors-title { color: #000 !important; }
-            .logo-box { border: 1px solid #000 !important; background: transparent !important; }
-            .sponsor-item { border: none !important; background: transparent !important; }
-        }
 
         /* RESPONSIVE LAYOUT */
         @media (max-width: 1024px) {
