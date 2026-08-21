@@ -755,52 +755,95 @@
 
         /* PRINT OPTIMIZATION */
         @media print {
-            .no-print-controls { 
-                display: none !important; 
-            }
-            body { 
-                background: #ffffff !important; 
-                color: #000000 !important; 
-                padding: 0;
-            }
-            .wrapper { 
-                border: 2px solid #000; 
-                background: #ffffff !important; 
-                color: #000000 !important; 
-                box-shadow: none !important;
-                max-width: 100%;
-                padding: 15px;
-            }
-            .main-title, .sub-title, .santara-badge, .winner-header, .lomba-tag, .section-heading { 
-                color: #000000 !important; 
-                -webkit-text-fill-color: #000000 !important;
-                text-shadow: none !important; 
-                border-color: #000 !important; 
-            }
-            .rules-container, .groups-container, .pool-card, .winner-grand-card, .semi-box, .pos-card, .cara-bermain-item, .footer-group, .group-card { 
-                background: #ffffff !important; 
-                border: 1px solid #000000 !important; 
-                color: #000000 !important; 
-                box-shadow: none !important;
-            }
-            .pool-header, .pos-num, .item-icon, .podium-badge, .lomba-tag, .group-header { 
-                background: #eee !important; 
-                color: #000000 !important; 
-                border: 1px solid #000 !important;
-            }
-            .team-item { 
-                background: #ffffff !important; 
-                border: 1px solid #aaa !important; 
-            }
-            .team-label, .team-input, .semi-input, .podium-input, .pos-title, .pos-desc, .konsep-text, .footer-info, .member-name, .member-school { 
-                color: #000000 !important; 
-            }
-            .arrow-down-icon { fill: #000000 !important; }
-            .sponsors-wrapper { border: 1px solid #000; background: #fff !important; }
-            .sponsors-title { color: #000 !important; }
-            .logo-box { border: 1px solid #000 !important; background: transparent !important; }
-            .sponsor-item { border: none !important; background: transparent !important; }
-        }
+    /* 1. SEMBUNYIKAN KONTROL, ATURAN LOMBA, DAN DAFTAR KELOMPOK */
+    .no-print-controls,
+    .rules-container,
+    .groups-container {
+        display: none !important;
+    }
+
+    body {
+        background: #2b0307 !important;
+        color: #fff8eb !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .wrapper {
+        background-color: #3b050d !important;
+        border: 1.5px solid #f2c94c !important;
+        border-radius: 12px !important;
+        padding: 10px 12px !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* 2. HEADER COMPACT */
+    .header-container {
+        margin-bottom: 8px !important;
+        padding-bottom: 6px !important;
+    }
+    .logo-box {
+        width: 75px !important;
+        height: 60px !important;
+        padding: 3px !important;
+    }
+    .main-title {
+        font-size: 1.45rem !important;
+    }
+    .sub-title {
+        font-size: 0.72rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    /* 3. BAGAN PERTANDINGAN (UKURAN KECIL NAMUN JELAS) */
+    .bracket-container {
+        margin-bottom: 8px !important;
+    }
+    .section-heading {
+        font-size: 0.85rem !important;
+        padding-bottom: 4px !important;
+        margin-bottom: 6px !important;
+    }
+    .pools-table, .semi-winners-table {
+        border-spacing: 4px !important;
+        margin-bottom: 2px !important;
+    }
+    .pool-card-td {
+        padding: 5px !important;
+        border-radius: 6px !important;
+    }
+    .pool-header {
+        font-size: 0.65rem !important;
+        padding: 2px !important;
+    }
+    .team-item {
+        padding: 2px 4px !important;
+        font-size: 0.68rem !important;
+    }
+    .winner-grand-card {
+        padding: 8px 10px !important;
+        max-width: 480px !important;
+    }
+    .podium-td {
+        padding: 4px 3px !important;
+    }
+
+    /* 4. FOOTER COMPACT */
+    .footer {
+        margin-top: 6px !important;
+        padding-top: 6px !important;
+    }
+    .footer-td {
+        padding: 4px !important;
+        font-size: 0.6rem !important;
+    }
+    .sponsors-td {
+        padding: 4px 8px !important;
+    }
 
         /* RESPONSIVE LAYOUT */
         @media (max-width: 1024px) {
