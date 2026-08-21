@@ -841,7 +841,7 @@
         <div class="header-container">
             <!-- LOGO KIRI: LOGO PENYELENGGARA / FORUM OSIS -->
             <div class="logo-box" onclick="triggerFileUpload('input-logo-left')" title="Klik untuk mengunggah / mengganti Logo Kiri">
-                <img id="img-logo-left" src="logo-forum-osis.png" alt="Logo Forum OSIS" class="logo-img" 
+                <img id="img-logo-left" src="logo-FOKC.svg" alt="Logo Forum OSIS" class="logo-img" 
                      onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23f2c94c\' stroke-width=\'1.5\'><circle cx=\'12\' cy=\'12\' r=\'10\'/><path d=\'M12 6v12M6 12h12\'/></svg>';">
                 <div class="upload-overlay">📷 Klik Ganti Logo</div>
                 <input type="file" id="input-logo-left" accept="image/*" style="display:none;" onchange="handleHeaderLogoUpload(this, 'img-logo-left', 'santara_logo_left')">
@@ -864,7 +864,7 @@
 
             <!-- LOGO KANAN: LOGO EVENT / SANTARA 2026 -->
             <div class="logo-box" onclick="triggerFileUpload('input-logo-right')" title="Klik untuk mengunggah / mengganti Logo Kanan">
-                <img id="img-logo-right" src="logo-santara.png" alt="Logo SANTARA 2026" class="logo-img" 
+                <img id="img-logo-right" src="logo santara.png" alt="Logo SANTARA 2026" class="logo-img" 
                      onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'80\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23f2c94c\' stroke-width=\'1.5\'><polygon points=\'12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\'/></svg>';">
                 <div class="upload-overlay">📷 Klik Ganti Logo</div>
                 <input type="file" id="input-logo-right" accept="image/*" style="display:none;" onchange="handleHeaderLogoUpload(this, 'img-logo-right', 'santara_logo_right')">
@@ -1107,12 +1107,12 @@
            KONFIGURASI LOGO DEFAULT (Dapat diubah via kodingan di sini)
            ========================================================= */
         const DEFAULT_CONFIG_LOGOS = {
-            logoLeft: 'logo-forum-osis.png',
-            logoRight: 'logo-santara.png',
+            logoLeft: 'logo-FOKC.svg',
+            logoRight: 'logo santara.png',
             sponsors: [
-                { id: 'sp-1', name: 'emina', src: 'logo-emina.png', color: '#d81b60' },
+                { id: 'sp-1', name: 'emina', src: 'logo-emina.jpg', color: '#d81b60' },
                 { id: 'sp-2', name: 'Grab', src: 'logo-grab.png', color: '#00b14f' },
-                { id: 'sp-3', name: 'Yupi', src: 'logo-yupi.png', color: '#e53935' }
+                { id: 'sp-3', name: 'Yupi', src: 'logo-yupi.jpg', color: '#e53935' }
             ]
         };
 
